@@ -109,6 +109,12 @@ build CMakeFiles/BusSystem.dir/repo/passenger_repo.cpp.o: CXX_COMPILER__BusSyste
   OBJECT_DIR = CMakeFiles/BusSystem.dir
   OBJECT_FILE_DIR = CMakeFiles/BusSystem.dir/repo
 
+build CMakeFiles/BusSystem.dir/repo/ticket_repo.cpp.o: CXX_COMPILER__BusSystem_Debug /Users/truong14/Downloads/BusSystem/repo/ticket_repo.cpp || cmake_object_order_depends_target_BusSystem
+  DEP_FILE = CMakeFiles/BusSystem.dir/repo/ticket_repo.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -fcolor-diagnostics -std=gnu++14
+  OBJECT_DIR = CMakeFiles/BusSystem.dir
+  OBJECT_FILE_DIR = CMakeFiles/BusSystem.dir/repo
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target BusSystem
@@ -117,7 +123,7 @@ build CMakeFiles/BusSystem.dir/repo/passenger_repo.cpp.o: CXX_COMPILER__BusSyste
 #############################################
 # Link the executable BusSystem
 
-build BusSystem: CXX_EXECUTABLE_LINKER__BusSystem_Debug CMakeFiles/BusSystem.dir/main.cpp.o CMakeFiles/BusSystem.dir/dtos/date.cpp.o CMakeFiles/BusSystem.dir/dtos/time.cpp.o CMakeFiles/BusSystem.dir/dtos/passenger.cpp.o CMakeFiles/BusSystem.dir/dtos/trip.cpp.o CMakeFiles/BusSystem.dir/dtos/ticket.cpp.o CMakeFiles/BusSystem.dir/dtos/bus.cpp.o CMakeFiles/BusSystem.dir/repo/repository.cpp.o CMakeFiles/BusSystem.dir/repo/trip_repo.cpp.o CMakeFiles/BusSystem.dir/repo/passenger_repo.cpp.o
+build BusSystem: CXX_EXECUTABLE_LINKER__BusSystem_Debug CMakeFiles/BusSystem.dir/main.cpp.o CMakeFiles/BusSystem.dir/dtos/date.cpp.o CMakeFiles/BusSystem.dir/dtos/time.cpp.o CMakeFiles/BusSystem.dir/dtos/passenger.cpp.o CMakeFiles/BusSystem.dir/dtos/trip.cpp.o CMakeFiles/BusSystem.dir/dtos/ticket.cpp.o CMakeFiles/BusSystem.dir/dtos/bus.cpp.o CMakeFiles/BusSystem.dir/repo/repository.cpp.o CMakeFiles/BusSystem.dir/repo/trip_repo.cpp.o CMakeFiles/BusSystem.dir/repo/passenger_repo.cpp.o CMakeFiles/BusSystem.dir/repo/ticket_repo.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15
   OBJECT_DIR = CMakeFiles/BusSystem.dir
   POST_BUILD = :

@@ -6,6 +6,7 @@
 #define BUSSYSTEM_PASSENGER_REPO_H
 #include "../dtos/passenger.h"
 #include "repository.h"
+
 namespace repo {
     class passenger_repo {
         repository& repo;
