@@ -1,0 +1,3 @@
+/Users/truong14/Downloads/BusSystem/cmake-build-debug/CMakeFiles/BusSystem.dir
+/Users/truong14/Downloads/BusSystem/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/truong14/Downloads/BusSystem/cmake-build-debug/CMakeFiles/rebuild_cache.dir
