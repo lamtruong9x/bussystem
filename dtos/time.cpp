@@ -17,7 +17,7 @@ namespace dt {
 
     Time::Time(const std::string& dateString) {
         // Assuming the date string is always in the format "dd/mm/yyyy"
-        size_t pos1 = dateString.find('h');
+        size_t pos1 = dateString.find(':');
 
         hour = std::stoi(dateString.substr(0, pos1));
         minute = std::stoi(dateString.substr(pos1 + 1));
@@ -46,7 +46,7 @@ namespace dt {
     std::ostream& operator<<(std::ostream& os, const Time& entry)
     {
         os << entry.hour;
-        os << "h";
+        os << ":";
         os << entry.minute;
 
         return os;
