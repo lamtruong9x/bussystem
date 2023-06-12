@@ -40,3 +40,5 @@ dto::Trip *repo::trip_repo::getTripById(const std::string id) {
     }
     return nullptr;
 }
+
+repo::trip_repo::trip_repo(repo::repository &repo) : repo(repo) {}

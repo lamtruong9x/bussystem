@@ -10,6 +10,8 @@ namespace repo {
         repository& repo;
 
     public:
+        explicit trip_repo(repository &repo);
+
         bool create(dto::Trip &trip);
         bool isExist(const std::string id);
         std::vector<dto::Trip>& getTrips();

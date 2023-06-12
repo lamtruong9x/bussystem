@@ -25,7 +25,7 @@ bool repo::ticket_repo::isExist(const std::string &tripId, int seatNum) {
     return false;
 }
 
-bool repo::ticket_repo::removeTicketsByReservation(const std::string &phoneNumber, const std::string &tripId) {
+void repo::ticket_repo::deleteTicketsByReservation(const std::string &phoneNumber, const std::string &tripId) {
     repo.tickets.erase(
             std::remove_if(repo.tickets.begin(), repo.tickets.end(), [&](const dto::Ticket& ticket) {
                 return (ticket.getPhoneNumber() == phoneNumber) && (ticket.getTripId() == tripId);
@@ -52,4 +52,24 @@ std::vector<dto::Ticket> repo::ticket_repo::getTicketByPassengerAndTripId(const 
         }
     }
     return tickets;
+}
+
+bool repo::ticket_repo::changeTicket(const std::string &phoneNumber, const std::string &tripId, const int oldSeat,
+                                     const int newSeat) {
+    if(!isExist(tripId, newSeat) && isExist(tripId, oldSeat)) {
+        deleteTicket(phoneNumber, tripId, oldSeat);
+        auto newTicket = dto::Ticket(newSeat, tripId, phoneNumber);
+        create(newTicket);
+        return true;
+    }
+    return false;
+}
+
+void repo::ticket_repo::deleteTicket(const std::string &phoneNumber, const std::string &tripId, const int seatNum) {
+    for (auto it = repo.tickets.begin(); it != repo.tickets.end(); ++it) {
+        if ((*it).getPhoneNumber() == phoneNumber && (*it).getTripId() == tripId && seatNum == (*it).getSeatNum()) {
+            repo.tickets.erase(it);
+            break;  // Exit the loop after erasing the element
+        }
+    }
 }
